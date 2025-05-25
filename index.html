@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fastest Website</title>
+  <!-- Inline critical CSS -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; line-height: 1.5; }
+    header, main, footer { max-width: 800px; margin: 0 auto; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>⚡ World's Fastest Website</h1>
+  </header>
+  <main>
+    <p>This page loads in <strong><span id="loadTime">0</span>ms</strong>.</p>
+  </main>
+  <footer>
+    <p>No frameworks, no bloat.</p>
+  </footer>
+  <!-- Load non-critical JS at the end -->
+  <script>
+    document.getElementById('loadTime').textContent = 
+      Math.round(performance.now());
+  </script>
+</body>
+</html>
